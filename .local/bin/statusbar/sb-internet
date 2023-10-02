@@ -30,4 +30,14 @@ fi
 # TUN
 [ -n "$(cat /sys/class/net/tun*/operstate 2>/dev/null)" ] && tunicon=" 🔒"
 
-printf "%s%s%s\n" "$wifiicon" "$ethericon" "$tunicon"
+# Luke's original print line below
+#printf "%s%s%s\n" "$wifiicon" "$ethericon" "$tunicon"
+
+# Below is his original line.
+# echo "VOL $icon$vol%"
+
+# I have it print without the icon:
+echo "VOL $vol%"
+
+#My modification to use text instead of emojis if possible
+printf "Wifi %s%s%s\n" "$wifiicon" "$ethericon" "$tunicon"
