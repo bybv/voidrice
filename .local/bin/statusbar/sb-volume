@@ -36,4 +36,8 @@ case 1 in
 	* ) echo 🔇 && exit ;;
 esac
 
-echo "$icon$vol%"
+# Below is Luke's original line.
+# echo "VOL $icon$vol%"
+
+# I have it print without the icon:
+echo "VOL $vol%"
