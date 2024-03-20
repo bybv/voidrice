@@ -11,9 +11,15 @@ case $BLOCK_BUTTON in
 ⚡: charged
 ❗: battery very low!
 - Scroll to change adjust xbacklight." ;;
+<<<<<<< HEAD
         4) xbacklight -inc 10 ;;
         5) xbacklight -dec 10 ;;
         6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+=======
+	4) xbacklight -inc 10 ;;
+	5) xbacklight -dec 10 ;;
+	6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+>>>>>>> upstream/master
 esac
 
 # Loop through all attached batteries and format the info
